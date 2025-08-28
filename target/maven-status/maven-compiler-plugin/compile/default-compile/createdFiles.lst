@@ -1,0 +1,4 @@
+edu\colegio\proyecto\service\StudentService.class
+edu\colegio\proyecto\web\bean\StudentBean.class
+edu\colegio\proyecto\dao\StudentDAO.class
+edu\colegio\proyecto\model\Student.class
