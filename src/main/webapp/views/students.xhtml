@@ -1,10 +1,13 @@
-<!DOCTYPE html>
+<<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:p="http://primefaces.org/ui">
+
 <h:head>
     <title>Gestión de Estudiantes</title>
 </h:head>
+
 <h:body>
     <h1>Gestión de Estudiantes</h1>
 
@@ -13,16 +16,26 @@
             <p:inputText value="#{studentBean.student.nombre}" placeholder="Nombre"/>
             <p:inputText value="#{studentBean.student.apellido}" placeholder="Apellido"/>
             <p:inputText value="#{studentBean.student.grado}" placeholder="Grado"/>
-            <p:commandButton value="Guardar" action="#{studentBean.guardar}" update="tabla"/>
+            <p:commandButton value="Guardar" 
+                             action="#{studentBean.guardar}" 
+                             update="tabla"/>
         </p:panel>
     </h:form>
 
     <h:form>
-        <p:dataTable id="tabla" value="#{studentBean.students}" var="s" border="1">
-            <p:column headerText="ID">#{s.id}</p:column>
-            <p:column headerText="Nombre">#{s.nombre}</p:column>
-            <p:column headerText="Apellido">#{s.apellido}</p:column>
-            <p:column headerText="Grado">#{s.grado}</p:column>
+        <p:dataTable id="tabla" value="#{studentBean.students}" var="s">
+            <p:column headerText="ID">
+                <h:outputText value="#{s.id}"/>
+            </p:column>
+            <p:column headerText="Nombre">
+                <h:outputText value="#{s.nombre}"/>
+            </p:column>
+            <p:column headerText="Apellido">
+                <h:outputText value="#{s.apellido}"/>
+            </p:column>
+            <p:column headerText="Grado">
+                <h:outputText value="#{s.grado}"/>
+            </p:column>
         </p:dataTable>
     </h:form>
 
